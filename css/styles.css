@@ -215,46 +215,133 @@ body {
     }
 }
 
-@media screen and (min-width: 480px) {
-    .container {
-        width: 320px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
+/*=========HEADER TABLET STYLES===============*/
 @media screen and (min-width: 768px) {
     .container {
         width: 768px;
     }
-}
-/*=========HEADER TABLET STYLES===============*/
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-open-btn {
+        display: none;
+    }
+    
+    .page-header {
+        padding: 0;
+        border-bottom: 1px solid #E7E9FC;
+        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    }
 
-.menu {
+    .page-header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .page-navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .logotype {
+        margin-right: 120px;
+    }
+
+    .menu {
     display: flex;
+    gap: 40px;
+}
+
+.menu-item {
+    padding: 24px 0;
+}
+
+.menu-link {
+    color:#2E2F42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link-current {
+    color: #404BBF;
+font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: #404BBF;
+}
+
+ .menu-link-current::after {
+content:"";
+height: 4px;
+border-radius: 2px;
+background: #404BBF;
+position: absolute;
+left: 0;
+bottom: -1px;
+width: 100%;
 }
 
 .contacts-list {
-    display: flex;
+    display: block;
+    
 }
 
-.mobile-menu {
-    display: none;
+.contacts-item-link {
+    color: #434455;
+    font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.17;
+letter-spacing: 0.04em;
 }
-
-.mobile-open-btn {
-    display: none;
 }
 
 /*=========/HEADER TABLET STYLES===============*/
+
+/*=========HEADER DESKTOP STYLES===============*/
 
 @media screen and (min-width: 1158px) {
     .container {
         width: 1158px;
     }
-}
 
+    .logotype {
+        margin-right: 76px;
+    }
 
+    .contacts-list {
+        display: flex;
+        gap: 40px;        
+    }
 
-
-
+    .contacts-item-link {
+        font-size: 16px;
+        line-height: 1.5;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .contacts-item-link:hover,
+    .contacts-item-link:focus {
+        color: #404BBF;
+    }
+/*=========/HEADER DESKTOP STYLES===============*/
+/*==@media screen and (min-width: 480px) {
+    .container {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}==*/
