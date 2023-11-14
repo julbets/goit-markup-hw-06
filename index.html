@@ -23,7 +23,7 @@
 
 <body>
     <header class="page-header">
-        <div class="container">
+        <div class="container page-header-container">
             <!--Navigation-->
             <nav class="page-navigation">
                 <a class="logotype link" href="./index.html">Web<span class="logotype-span">Studio</span>
@@ -34,7 +34,11 @@
                     <li class="menu-item"><a class="menu-link link" href="">Contacts</a></li>
                 </ul>
             </nav>
-
+<button class="mobile-open-btn" type="button">
+    <svg class="mobile-open-btn-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-burger"></use>
+    </svg>
+</button>
             <!--Contacts-->
             <address class="contacts">
                 <ul class="contacts-list list">
@@ -53,15 +57,15 @@
     <main>
 
         <!--section hero-->
-        <section class="hero-section">
+        <!--<section class="hero-section">
             <div class="container">
                 <h1 class="main-slogan">Effective Solutions for Your Business</h1>
                 <button class="order-button" type="button">Order Service</button>
             </div>
-        </section>
+        </section>-->
 
         <!--section 4 principles-->
-        <section class="principals section">
+        <!--<section class="principals section">
             <div class="container">
                 <h2 class="hidden-header visually-hidden">Our Principles</h2>
                 <ul class="principals-list list">
@@ -115,10 +119,10 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>-->
 
         <!--section Our Team-->
-        <section class="team section">
+        <!--<section class="team section">
             <div class="container">
                 <h2 class="team-header">Our Team</h2>
                 <ul class="team-list list">
@@ -281,11 +285,11 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>-->
 
         <!--Portfolio-->
 
-        <section class="portfolio section">
+        <!--<section class="portfolio section">
             <div class="container">
                 <h2 class="portfolio-header">Our Portfolio</h2>
                 <ul class="portfolio-list list">
@@ -369,11 +373,11 @@
 
                 </ul>
             </div>
-        </section>
+        </section>-->
     </main>
 
     <!--Footer-->
-    <footer class="footer">
+   <!--<footer class="footer">
         <div class="container">
             <div class="footer-logo"><a class="logotype link" href="./index.html">Web<span class="footer-logotype-span">Studio</span>
             </a>
@@ -428,8 +432,9 @@
             </form>
         </div>
         </div>
-    </footer>
-    <div class="backdrop is-open">
+    </footer>-->
+    <!---BACKDROP-->
+    <!--<div class="backdrop">
         <div class="modal">
             <button class="modal-close-btn" type="button">
                 <svg class="modal-close-btn-icon" width="8" height="8" aria-label="modal close button">
@@ -487,7 +492,65 @@
                 Send
              </button>
         </form>
-    </div>
+    </div>-->
+    <!--MOBILE MENU--->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close-btn" type="button">
+            <svg class="mobile-menu-close-btn-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        <div class="container mobile-menu-container">
+          <nav class="navigation">
+            <ul class="navigation-list list">
+                <li class="navigation-list-item"><a class="navigation-list-item-link-current link" href="./index.html">Studio</a></li>
+                <li class="navigation-list-item"><a class="navigation-list-item-link link" href="">Portfolio</a></li>
+                <li class="navigation-list-item"><a class="navigation-list-item-link link" href="">Contacts</a></li>
+            </ul>
+          </nav>
+            <address class="company-contacts">
+                <ul class="company-contacts-list list">
+                    <li class="company-contacts-item">
+                        <a class="company-contacts-item-link tel link" href="tel:+110001111111">+11 (000) 111-11-11
+                        </a>
+                    </li>
+                    <li class="company-contacts-item">
+                        <a class="company-contacts-item-link link" href="mailto:info@devstudio.com">info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+            </address>
+            <ul class="social-media list">
+                <li class="social-media-item">
+                    <a href="" class="social-media-item-link">
+                        <svg class="social-media-item-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-item-link">
+                        <svg class="social-media-item-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-item-link">
+                        <svg class="social-media-item-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-item-link">
+                        <svg class="social-media-item-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 
