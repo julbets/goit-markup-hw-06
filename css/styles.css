@@ -207,6 +207,7 @@ letter-spacing: 0.02em;
     line-height: 1.5;
     letter-spacing: 0.02em;
     align-self: stretch;
+    margin-bottom: 72px;
 }
 
 .principal-icon-container {
@@ -486,7 +487,7 @@ margin-bottom: 16px;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -512,16 +513,6 @@ margin-bottom: 16px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     }
 
-    .modal-close-btn:hover,
-    .modal-close-btn:focus {
-        background-color: #404BBF;
-        border: none;
-    }
-
-    .modal-close-btn:focus .modal-close-btn-icon {
-fill: #ffffff;
-    }
-
     .contacts-form-description {
         color: var(--NAVY-BLUE, #2E2F42);
 text-align: center;
@@ -532,6 +523,10 @@ letter-spacing: 0.02em;
 margin-bottom: 16px;
     }
 
+    .contacts-form-field-wrapper {
+        margin-bottom: 8px;
+    }
+
     .contacts-form-field-label {
         display: block;
         color: var(--LIGHT-SLATE, #8E8F99);
@@ -540,7 +535,6 @@ font-weight: 400;
 line-height: 1.17;
 letter-spacing: 0.04em;
 margin-bottom: 4px;
-
     }
 
     .contacts-form-field {
@@ -548,22 +542,10 @@ margin-bottom: 4px;
         height: 40px;
         border-radius: 4px;
 border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
-padding-left: 38px;
+padding-left: 34px;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 background-color: transparent; 
 outline: transparent;
-
-    }
-
-    .contacts-form-field:focus {
-border-color: #4D5AE5;
-outline-color: transparent;
-outline-offset: 4px;
-
-    }
-
-    .contacts-form-field-wrapper {
-        margin-bottom: 8px;
     }
 
     .contacts-form-field-icon {
@@ -575,10 +557,6 @@ outline-offset: 4px;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .contacts-form-field:focus + .contacts-form-field-icon {
-        fill: #4D5AE5;
-    }
-
     .contacts-form-input-wrapper {
 position: relative;
     }
@@ -586,6 +564,7 @@ position: relative;
     .contacts-form-message-wrapper {
         margin-bottom: 16px;
     }
+
     .contacts-form-message {
         width: 100%;
         height: 120px;
@@ -607,16 +586,11 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     }
 
-    .contacts-form-message:focus {
-        border-color: #4D5AE5;
-outline-color: transparent;
-outline-offset: 4px;
-    }
-
     .contacts-form-own-checkbox {
         display: inline-flex;
         width: 16px;
         height: 16px;
+        margin-right: 8px;
         justify-content: center;
         align-items: center;
         border: 1px solid rgba(46, 47, 66, 0.40);
@@ -632,7 +606,7 @@ font-size: 12px;
 font-weight: 400;
 line-height: 1.17;
 letter-spacing: 0.04em;
-margin-right: 8px;
+display: flex;
     }
 
     .privacy-policy-link {
@@ -651,18 +625,12 @@ margin-right: 8px;
   border: none;
 }
 
-.contacts-form-checkbox:focus
-  + .contacts-form-checkbox-label
-  .contacts-form-own-checkbox {
-    outline: 1px solid #4D5AE5;
-  }
-
   .contacts-form-btn {
     min-width: 169px;
     height: 56px;
 padding: 16px 32px;
-margin-left: 120px;
-margin-bottom: 24px;
+margin-left: auto;
+margin-right: auto;
 display: block;
 border-radius: 4px;
 background: var(--IRIS, #4D5AE5);
@@ -675,7 +643,8 @@ line-height: 1.5;
 letter-spacing: 0.04em;
 border: none;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  }  
+
 /*=========/MOBILE STYLES===============*/
 
 @media screen and (max-width: 767px) {
@@ -980,7 +949,15 @@ footer .container {
     display: flex;
     gap: 24px;
     }
-
+    
+    .modal {
+        width: 408px;
+        min-height: 584px;
+    }
+    
+        .contacts-form-field {
+            height: 58px;
+        }
 }
 /*=========/TABLET STYLES===============*/
 
@@ -1162,6 +1139,38 @@ footer .container {
 .subscribe-btn {
     margin-left: 24px;
 }
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404BBF;
+    border: none;
+}
+
+.modal-close-btn:focus .modal-close-btn-icon {
+fill: #ffffff;
+}
+
+.contacts-form-field:focus {
+    border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+        }
+
+        .contacts-form-field:focus + .contacts-form-field-icon {
+            fill: #4D5AE5;
+        }
+
+        .contacts-form-message:focus {
+            border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+        }
+
+        .contacts-form-checkbox:focus
+  + .contacts-form-checkbox-label
+  .contacts-form-own-checkbox {
+    outline: 1px solid #4D5AE5;
+  }
 
 }
 /*=========/HEADER DESKTOP STYLES===============*/
